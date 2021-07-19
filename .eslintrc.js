@@ -4,22 +4,28 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: { jsx: true }
+    ecmaFeatures: { jsx: true },
   },
-  extends: [
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
-  ],
+  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   globals: {
-    React: 'writable'
+    React: 'writable',
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   env: {
     node: true,
     browser: true,
-  }
+  },
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+  },
 }
