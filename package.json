@@ -9,7 +9,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit" : "lint-saged"
+      "pre-commit" : "lint-staged"
     }
   },
   "lint-staged": {
