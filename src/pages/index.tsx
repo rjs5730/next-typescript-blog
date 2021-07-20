@@ -5,8 +5,9 @@ import PostPreview from 'src/types/PostPreview'
 import fs from 'fs'
 import matter from 'gray-matter'
 
-import Layout from '../components/Layout'
-import PostListing from '../components/PostListing'
+import Layout from 'src/components/Layout'
+import Hero from 'src/components/Hero'
+import MainSection from 'src/components/MainSection'
 
 interface BlogProps {
   posts: PostPreview[]
@@ -15,12 +16,8 @@ interface BlogProps {
 const Blog: NextPage<BlogProps> = ({ posts }) => {
   return (
     <Layout pageTitle="Blog">
-      <section>
-        <h1>Next.js Blog</h1>
-        <p>Create a blog with Next.js and Typesciprt</p>
-        <button>Subscribe</button>
-      </section>
-      <PostListing posts={posts} />
+      <Hero />
+      <MainSection posts={posts} />
     </Layout>
   )
 }

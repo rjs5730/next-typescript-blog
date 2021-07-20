@@ -1,13 +1,16 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { Container } from 'src/styles/Containers'
+import Layout from 'src/components/Layout'
 
 interface aboutProps {}
 
 const about: React.FC<aboutProps> = () => {
   return (
     <Layout pageTitle="About">
-      <h1>About Us</h1>
-      <p>아무말</p>
+      <Container>
+        <h1>About Us</h1>
+        <p>아무말</p>
+      </Container>
     </Layout>
   )
 }
